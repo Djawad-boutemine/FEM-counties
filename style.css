@@ -2,7 +2,8 @@
 :root {
     --cl-bg: hsl(0, 0%, 98%);
     --cl-elements: hsl(0, 0%, 100%);
-    --cl-text: hsl(200, 15%, 8%);
+    --cl-text: hsl(207, 26%, 17%);
+    /* --cl-text: hsl(200, 15%, 8%); */
     --cl-input: hsl(0, 0%, 52%);
     --cl-shadow: #00000026;
 }
@@ -15,41 +16,42 @@
     --cl-input: hsl(0, 0%, 100%);
     --cl-shadow: hsl(200, 15%, 8%);
 }
-
+* {
+    transition: 0.15s color ;
+}
 /* start styling the body */
 body {
-    color: var(--cl-text) !important;
-    background-color: var(--cl-bg) !important;
+    color: var(--cl-text);
+    background-color: var(--cl-bg);
 }
 
 /* end styling the body */
 /* start styling the header */
 header {
-    background-color: var(--cl-elements) !important;
+    background-color: var(--cl-elements);
     box-shadow: 0px 0px 7px 1px var(--cl-shadow);
 
     & h1 {
-        font-size: clamp(1em, 5vw, 2em) !important;
+        font-size: clamp(1em, 5vw, 2em);
     }
 
     & button {
         background-color: inherit;
         color: inherit;
         border: none;
-        padding: 0 !important;
-        font-size: clamp(1em, 5vw, 1.7em) !important;
+        font-size: clamp(1em, 5vw, 1.7em);
     }
 }
 
 /* end styling the header */
 /* start styling the main info */
 .main-info {
-    background-color: var(--cl-bg) !important;
+    background-color: var(--cl-bg);
 }
 
 /* start styling the top bar */
 .search {
-    background-color: var(--cl-elements) !important;
+    background-color: var(--cl-elements);
     box-shadow: 0 0 11px 1px var(--cl-shadow);
     width: clamp(20rem, 40vw, 40rem);
 
@@ -68,17 +70,16 @@ header {
     }
 
     & svg {
-        color: var(--cl-input) !important;
+        color: var(--cl-input);
     }
 }
 
 .dropdown {
     width: clamp(15rem, 30vw, 17rem);
 
-
     &>button {
         box-shadow: 0 0 11px 1px var(--cl-shadow);
-        color: inherit !important;
+        color: inherit;
         background-color: var(--cl-elements);
     }
 
@@ -86,10 +87,10 @@ header {
         background-color: var(--cl-elements);
 
         & .dropdown-item {
-            color: var(--cl-text) !important;
+            color: var(--cl-text);
 
             &:hover {
-                color: black !important;
+                color: black;
             }
         }
     }
@@ -99,15 +100,12 @@ header {
 /* start stlying the cards */
 .flag-card .container {
     cursor: pointer;
-    overflow: hidden;
-    padding: 0 !important;
+    padding: 0  ;
     box-shadow: 0 0 11px 1px var(--cl-shadow);
 
     & img {
-        /* height: clamp(10rem,40vw,15rem); */
         aspect-ratio: 1.8/1;
-        width: 100%;
-        object-fit: cover;
+        object-fit: cover ;
         box-shadow: 0 0 11px 1px var(--cl-shadow);
     }
 
@@ -124,18 +122,15 @@ header {
         font-weight: normal;
     }
 }
-
 /* end stlying the cards */
 /* end styling the main info */
 /* start styling the more info */
 .more-info {
-    background-color: var(--cl-bg) !important;
-
+    background-color: var(--cl-bg);
     & img {
         box-shadow: 0 0 11px 1px var(--cl-shadow);
-        padding: 0 !important;
+        padding: 0;
         height: 100%;
-
         @media(max-width : 992px) {
             max-width: 35em;
         }
@@ -143,24 +138,22 @@ header {
 }
 
 .back {
-    background-color: var(--cl-elements) !important;
+    background-color: var(--cl-elements);
     box-shadow: 0 0 11px 1px var(--cl-shadow);
-    color: inherit !important;
+    color: inherit;
     border: none;
 }
 
 .main-content .text {
     font-weight: bold;
     font-size: clamp(1.2em, 1.5vw, 1.9em);
-
     @media(max-width : 992px) {
         font-size: clamp(1.2em, 3vw, 1.5em);
     }
-
     & span {
         font-weight: normal;
+        padding: 0 10px;
     }
-
     & .border-countries span {
         background-color: var(--cl-elements);
         box-shadow: 0 0 11px 1px var(--cl-shadow);
